@@ -9,8 +9,8 @@ import { MarkerHouse } from "./MarkerHouse";
 
 export function Location() {
   const coordinatePoint = {
-    lat: 40.463667,
-    lng: -3.74922
+    lat: 19.42847,
+    lng: -99.12766
   }
 
   const centerMarker = (position: {lat: number, lng: number}, fnMap: Map) => {
@@ -31,9 +31,9 @@ export function Location() {
       <h2 className="max-w-2xl mx-auto my-4 mb-8 text-3xl font-semibold text-center">Disponibles en todo México, con la comunidad de propiedades más grande dede 2020</h2>
       <MapContainer 
         center={coordinatePoint}
-        zoom={6}
+        zoom={5}
         scrollWheelZoom={false}
-        className="h-[700px]"
+        className="h-[500px] lg:h-[600px]"
       >
         <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png" />
         <MarkerHouse selectMarker={centerMarker} />

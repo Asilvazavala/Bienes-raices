@@ -24,6 +24,6 @@ export const dataHeader: HeaderData[] = [
   {
     id: 5,
     name: "Propiedades",
-    link: "#propierties",
+    link: "#properties",
   },
 ];

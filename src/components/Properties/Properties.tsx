@@ -18,7 +18,7 @@ export function Properties() {
 
 	return (
 		<Transition className="px-4 my-8 md:py-32 md:px-40">
-			<main className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+			<main id="properties" className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
 				{dataFilteredHouses.map(({id, location, price, bedrooms, bathroom, image, star, meters}) => (
 					<Link 
 						key={id}

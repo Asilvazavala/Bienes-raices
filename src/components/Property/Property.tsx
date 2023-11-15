@@ -32,9 +32,9 @@ export function Property(props: PropertyProps) {
           <Image 
             src={`/assets/properties/${house.image}`}
             alt={`Casa en ${house.location}`}
-            width={1200}
-            height={1200}
-            className="w-full h-auto rounded-2xl"
+            width={800}
+            height={800}
+            className="w-[700px] h-[600px] rounded-2xl bg-cover"
             priority
           />
           <div className="gap-4 lg:flex mt-4">

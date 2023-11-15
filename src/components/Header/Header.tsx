@@ -5,15 +5,16 @@ import { BsTelephone } from 'react-icons/bs';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Navbar } from '../Navbar';
+import { BsBuildings } from "react-icons/bs";
 
 export function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
-    <section className="container mx-auto my-5">
+    <section className="container mx-auto my-5 px-8">
       <article className="flex items-center justify-between px-5 md:px-0">
         <Link href="/">
-          <h1 className='font-medium'>Bienes Raíces</h1>
+          <BsBuildings className="text-2xl" />
         </Link>
 
         <CiMenuFries 
@@ -28,7 +29,7 @@ export function Header() {
             <BsTelephone />
             <span className='hidden md:block'>+52 123 456 7890</span>
           </Link>
-          <Link href="/Login" className='px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black'>
+          <Link href="/" className='px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black'>
             Login
           </Link>
         </article>

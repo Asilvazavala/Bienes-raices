@@ -4,6 +4,7 @@ import { icon } from 'leaflet';
 import { housesData } from './MarkerHouse.data';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function MarkerHouse(props: MarkerHouseProps) {
   const  { selectMarker } = props;
@@ -28,16 +29,22 @@ export function MarkerHouse(props: MarkerHouseProps) {
             </span>
             <h5 className='text-md text-secondary'>{name}</h5>
           </article>
+
           <Image 
             src={`/assets/houses/${image}`}
             alt={name}
             width={100}
             height={100}
-            className='w-full h-auto'
+            className='w-[100px] h-[100px] mb-4'
           />
-          <button className='px-3 py-2 mt-2 text-white rounded-lg bg-secondary transition-all hover:bg-black'>
+
+          <Link 
+            href={`/properties/${id}`}
+            style={{ color: 'white' }}
+            className='px-3 py-2 text-white rounded-lg bg-secondary transition-all hover:bg-black'>
             Ver propiedad
-          </button>
+          </Link>
+          
         </Popup>
       </Marker>
     ))

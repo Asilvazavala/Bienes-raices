@@ -1,6 +1,6 @@
 export function formatPrice(price: number) {
-  return Number(price).toLocaleString("es-ES", {
+  return price.toLocaleString("es-MX", {
     style: "currency",
-    currency: "MEX",
+    currency: "MXN",
   });
 }

@@ -3,10 +3,13 @@ import { dataHeader } from "../Header/Header.data"
 import { NavbarProps } from "./Navbar.types"
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function Navbar(props: NavbarProps) {
   const { openMobileMenu } = props;
   const [isScrolling, setIsScrolling] = useState(false);
+
+  const router = useRouter();
 
   const handleScroll = () => {
     window.scrollY >= window.innerHeight - 600
@@ -21,6 +24,10 @@ export function Navbar(props: NavbarProps) {
     }
   }, [])  
 
+  const handleNavigate = (url: string) => {
+    router.push(`/${url}`)
+  }
+
   return (
     <AnimatePresence>
       {isScrolling 
@@ -31,7 +38,7 @@ export function Navbar(props: NavbarProps) {
             initial='initial'
             animate='animate'
             exit='exit'
-            className="mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-white bg-gray-400/40 top-10 rounded-3xl backdrop-blur w-fit"
+            className="mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-white bg-gray-400/40 top-5 rounded-3xl backdrop-blur w-fit"
           >
             <div className="items-center hidden gap-5 md:flex">
               {dataHeader.map(({id, name, link}) => (
@@ -44,7 +51,7 @@ export function Navbar(props: NavbarProps) {
                 </Link>
               ))}
               <Link
-                href="/login"
+                href="/"
                 className="px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black"
               >
                 Login
@@ -55,13 +62,13 @@ export function Navbar(props: NavbarProps) {
         : (
           <div className={`${openMobileMenu ? 'absolute z-[1] left-0 bg-white right-0 w-full p-4' : 'hidden'} gap-5 md:flex`}>
             {dataHeader.map(({ id, name, link}) => (
-              <Link 
+              <button 
+                onClick={() => handleNavigate(link)}
                 key={id} 
-                href={link} 
                 className="block hover:text-secondary hover:border-b-[1px]"
               >
                 {name}
-              </Link>
+              </button>
             ))}
           </div>
         )}

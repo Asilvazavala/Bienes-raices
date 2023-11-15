@@ -14,15 +14,16 @@ export function Form() {
           />
           <aside>
             <p>Antonio Silva</p>
-            <p className="text-secondary font-semibold">Comercial</p>
+            <p className="text-secondary font-semibold">Asesor Comercial</p>
           </aside>
         </article>
 
         <article className="my-5">
           <aside>
-            <label className="text-sm text-secondary">Nombre</label>
+            <label htmlFor="name" className="text-sm text-secondary">Nombre</label>
             <div className="mt-2">
               <input 
+                id="name"
                 type="text" 
                 name="name"
                 className="w-full rounded-md border-0 py-1.5 px-3 text-secondary shadow-sm ring-1 
@@ -32,7 +33,7 @@ export function Form() {
           </aside>
 
           <aside className="my-2">
-            <label className="text-sm text-secondary">Teléfono</label>
+            <label htmlFor="phone" className="text-sm text-secondary">Teléfono</label>
             <div className="mt-2">
               <input 
                 id="phone"
@@ -46,9 +47,10 @@ export function Form() {
           </aside>
 
           <aside>
-            <label className="text-sm text-secondary">Descripción</label>
+            <label htmlFor="description" className="text-sm text-secondary">Descripción</label>
             <div className="mt-2">
               <textarea 
+                id="description"
                 name="description"
                 rows={4}
                 defaultValue={''}
