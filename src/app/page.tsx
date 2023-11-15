@@ -1,8 +1,6 @@
 "use client"
 import { About } from '@/components/About'
 import { Banner } from '@/components/Banner'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
 import { JoinCommunity } from '@/components/JoinCommunity'
 import { Properties } from '@/components/Properties'
 import { Services } from '@/components/Services'
@@ -21,7 +19,6 @@ export default function Home() {
   return (
     <>
       <TransitionPage />
-      <Header />
       <main>
         <Banner />
         <Properties />
@@ -31,7 +28,6 @@ export default function Home() {
           <About />
         </div>
         <JoinCommunity />
-        <Footer />
       </main>
     </>
   )
