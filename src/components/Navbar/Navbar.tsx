@@ -64,12 +64,19 @@ export function Navbar(props: NavbarProps) {
         )
         : (
           // Menu Principal & Responsive
-          <div className={`${openMobileMenu ? 'absolute z-[1] left-0 bg-secondary w-full text-white p-2 top-16' : 'hidden'} gap-3 lg:gap-5 md:flex`}>
+          <div className={`${
+            openMobileMenu
+              ? 'translate-y-0 transition-transform absolute left-0 bg-secondary w-full h-screen text-white p-2 top-16 z-[9999] text-3xl'
+              : 'hidden translate-y-full md:translate-y-0'
+            } gap-3 lg:gap-5 md:flex`}
+          >
             {dataHeader.map(({ id, name, link}) => (
               <button 
                 onClick={() => handleNavigate(link)}
                 key={id} 
-                className="block lg:hover:text-secondary lg:hover:border-b-secondary lg:border-b-[1px] lg:border-b-transparent mx-auto my-2"
+                className="block md:hover:text-secondary md:hover:border-b-secondary 
+                md:border-b-[1px] md:border-b-transparent mx-auto py-6 md:py-0 w-full md:w-fit
+                border-b-gray border-b-[1px]"
               >
                 {name}
               </button>

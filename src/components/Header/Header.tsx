@@ -23,7 +23,7 @@ export function Header() {
           onClick={() => setOpenMobileMenu(!openMobileMenu)}
         >
           {openMobileMenu 
-            ? <IoClose />
+            ? <IoClose className="text-gray text-3xl" />
             : <CiMenuFries />
           }
         </nav>
