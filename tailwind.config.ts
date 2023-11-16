@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        secondary: "#727C73",
+        gray: "#727C73",
+        secondary: "#16a085",
       },
       backgroundImage: {
         banner: "url('/assets/house-banner.png')",

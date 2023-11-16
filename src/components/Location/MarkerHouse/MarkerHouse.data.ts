@@ -1,7 +1,7 @@
 export const housesData = [
   {
     id: 1,
-    name: "Tuxtla",
+    name: "Tuxtla Gutierréz",
     image: "house20.jpeg",
     position: {
       lat: 16.75973,

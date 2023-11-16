@@ -41,6 +41,8 @@ export function Navbar(props: NavbarProps) {
             exit='exit'
             className="mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-white bg-gray-400/40 top-5 rounded-3xl backdrop-blur w-fit"
           >
+
+            {/* Menu Scrolling */}
             <div className="items-center hidden gap-5 md:flex">
               {dataHeader.map(({id, name, link}) => (
                 <Link 
@@ -61,12 +63,13 @@ export function Navbar(props: NavbarProps) {
           </motion.nav>
         )
         : (
-          <div className={`${openMobileMenu ? 'absolute z-[1] left-0 bg-secondary w-full text-white p-2 top-16' : 'hidden'} gap-5 md:flex`}>
+          // Menu Principal & Responsive
+          <div className={`${openMobileMenu ? 'absolute z-[1] left-0 bg-secondary w-full text-white p-2 top-16' : 'hidden'} gap-3 lg:gap-5 md:flex`}>
             {dataHeader.map(({ id, name, link}) => (
               <button 
                 onClick={() => handleNavigate(link)}
                 key={id} 
-                className="block lg:hover:text-secondary lg:hover:border-b-[1px] mx-auto my-2"
+                className="block lg:hover:text-secondary lg:hover:border-b-secondary lg:border-b-[1px] lg:border-b-transparent mx-auto my-2"
               >
                 {name}
               </button>

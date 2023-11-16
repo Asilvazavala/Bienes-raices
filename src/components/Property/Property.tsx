@@ -23,7 +23,7 @@ export function Property(props: PropertyProps) {
               {house.location}
             </h2>
             
-            <div className="flex items-center px-2 py-1 rounded-lg bg-secondary top-2 right-2 text-white">
+            <div className="flex items-center px-2 py-1 rounded-lg bg-secondary text-white h-10 w-16">
               <LiaStarSolid />
               <span className="ml-1 font-semibold">{house.star}</span>
             </div>
@@ -41,19 +41,19 @@ export function Property(props: PropertyProps) {
             <div className="flex items-center justify-center px-2 py-1 rounded-lg my-1 bg-slate-300/50">
               <LiaBedSolid />
               <span className="ml-2">{house.bedrooms}</span>
-              <span className="lg:hidden block ml-1 text-secondary">{house.bedrooms > 1 ? 'Habitaciones' : 'Habitación'}</span>
+              <span className="lg:hidden block ml-1 text-gray">{house.bedrooms > 1 ? 'Habitaciones' : 'Habitación'}</span>
             </div>
 
             <div className="flex items-center justify-center px-2 py-1 rounded-lg my-1 bg-slate-300/50">
               <LiaBathSolid />
               <span className="ml-2">{house.bathroom}</span>
-              <span className="lg:hidden block ml-1 text-secondary">{house.bathroom > 1 ? 'Baños' : 'Baño'}</span>
+              <span className="lg:hidden block ml-1 text-gray">{house.bathroom > 1 ? 'Baños' : 'Baño'}</span>
             </div>
 
             <div className="flex items-center justify-center px-2 py-1 rounded-lg my-1 bg-slate-300/50">
               <LiaRulerCombinedSolid />
               <span className="ml-2">{house.meters}</span>
-              <span className="lg:hidden block ml-1 text-secondary">Metros</span>
+              <span className="lg:hidden block ml-1 text-gray">Metros</span>
             </div>
           </div>
 

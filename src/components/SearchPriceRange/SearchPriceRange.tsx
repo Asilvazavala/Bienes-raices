@@ -1,8 +1,21 @@
 import { useState } from "react";
 import { GrFormDown, GrTag, GrFormUp } from "react-icons/gr";
+import { useProperties }from '../../hooks/PropertiesContext';
+import { formatPrice } from "@/utils/formatPrice";
 
 export function SearchPriceRange() {
+  const { applyFilters } = useProperties();
+
   const [isOpen, setIsOpen] = useState(false)
+
+  const handlePrice = (range1: number, range2: number) => {
+    const formatedRange1 = formatPrice(range1);
+    const formatedRange2 = formatPrice(range2);
+
+    applyFilters({
+      price: `${formatedRange1} - ${formatedRange2}`
+    });
+  };
 
   return (
     <section 
@@ -19,11 +32,10 @@ export function SearchPriceRange() {
       {isOpen ? <GrFormUp />: <GrFormDown />}
       {isOpen && (
         <div className='absolute top-[70px] bg-white z-50 p-4 rounded-lg shadow-light w-[230px] left-0'>
-          <p>Cualquier rango</p>
-          <p>$100,000 - $400,000</p>
-          <p>$400,000 - $700,000</p>
-          <p>$700,000 - $1,000,000</p>
-          <p>$1,000,000 en adelante </p>
+          <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(100000,400000)}>$100,000 - $400,000</p>
+          <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(400000,700000)}>$400,000 - $700,000</p>
+          <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(700000,1000000)}>$700,000 - $1,000,000</p>
+          <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(1000000,2000000)}>$1,000,000 o más </p>
         </div>
       )}
     </section>
