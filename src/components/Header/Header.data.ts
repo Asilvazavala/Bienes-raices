@@ -3,7 +3,7 @@ import { HeaderData } from "./Header.types";
 export const dataHeader: HeaderData[] = [
   {
     id: 1,
-    name: "Home",
+    name: "Inicio",
     link: "/",
   },
   {

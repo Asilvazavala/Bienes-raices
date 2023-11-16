@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export function Navbar(props: NavbarProps) {
-  const { openMobileMenu } = props;
+  const { openMobileMenu, setOpenMobileMenu } = props;
   const [isScrolling, setIsScrolling] = useState(false);
 
   const router = useRouter();
@@ -26,6 +26,7 @@ export function Navbar(props: NavbarProps) {
 
   const handleNavigate = (url: string) => {
     router.push(`/${url}`)
+    setOpenMobileMenu(false)
   }
 
   return (
@@ -60,12 +61,12 @@ export function Navbar(props: NavbarProps) {
           </motion.nav>
         )
         : (
-          <div className={`${openMobileMenu ? 'absolute z-[1] left-0 bg-white right-0 w-full p-4' : 'hidden'} gap-5 md:flex`}>
+          <div className={`${openMobileMenu ? 'absolute z-[1] left-0 bg-secondary w-full text-white p-2 top-16' : 'hidden'} gap-5 md:flex`}>
             {dataHeader.map(({ id, name, link}) => (
               <button 
                 onClick={() => handleNavigate(link)}
                 key={id} 
-                className="block hover:text-secondary hover:border-b-[1px]"
+                className="block lg:hover:text-secondary lg:hover:border-b-[1px] mx-auto my-2"
               >
                 {name}
               </button>

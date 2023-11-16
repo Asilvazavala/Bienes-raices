@@ -1,7 +1,7 @@
 export const dataProperties = [
   {
     id: 1,
-    location: "Tuxtla Gutierréz, Chiapas, MX",
+    location: "Tuxtla, Chiapas, MX",
     price: 200000,
     bedrooms: 3,
     bathroom: 1,

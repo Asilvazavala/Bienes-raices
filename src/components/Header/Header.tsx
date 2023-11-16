@@ -6,23 +6,29 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Navbar } from '../Navbar';
 import { BsBuildings } from "react-icons/bs";
+import { IoClose } from "react-icons/io5";
 
 export function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
-    <section className="container mx-auto my-5 px-8">
+    <section className="container mx-auto my-5 lg:px-8">
       <article className="flex items-center justify-between px-5 md:px-0">
         <Link href="/">
           <BsBuildings className="text-2xl" />
         </Link>
 
-        <CiMenuFries 
+        <nav
           className="block text-2xl md:hidden" 
           onClick={() => setOpenMobileMenu(!openMobileMenu)}
-        />
+        >
+          {openMobileMenu 
+            ? <IoClose />
+            : <CiMenuFries />
+          }
+        </nav>
 
-        <Navbar openMobileMenu={openMobileMenu} />
+        <Navbar openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
 
         <article className='flex items-center gap-2 md:gap-5'>
           <Link href="tel:1234567890" className='flex items-center gap-4 cursor-pointer'>

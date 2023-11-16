@@ -34,23 +34,26 @@ export function Property(props: PropertyProps) {
             alt={`Casa en ${house.location}`}
             width={800}
             height={800}
-            className="w-[700px] h-[600px] rounded-2xl bg-cover"
+            className="md:w-[700px] lg:h-[600px] w-full h-[400px] rounded-2xl bg-cover"
             priority
           />
           <div className="gap-4 lg:flex mt-4">
             <div className="flex items-center justify-center px-2 py-1 rounded-lg my-1 bg-slate-300/50">
               <LiaBedSolid />
               <span className="ml-2">{house.bedrooms}</span>
+              <span className="lg:hidden block ml-1 text-secondary">{house.bedrooms > 1 ? 'Habitaciones' : 'Habitación'}</span>
             </div>
 
             <div className="flex items-center justify-center px-2 py-1 rounded-lg my-1 bg-slate-300/50">
               <LiaBathSolid />
               <span className="ml-2">{house.bathroom}</span>
+              <span className="lg:hidden block ml-1 text-secondary">{house.bathroom > 1 ? 'Baños' : 'Baño'}</span>
             </div>
 
             <div className="flex items-center justify-center px-2 py-1 rounded-lg my-1 bg-slate-300/50">
               <LiaRulerCombinedSolid />
               <span className="ml-2">{house.meters}</span>
+              <span className="lg:hidden block ml-1 text-secondary">Metros</span>
             </div>
           </div>
 

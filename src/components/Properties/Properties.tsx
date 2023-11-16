@@ -47,14 +47,17 @@ export function Properties() {
 										<div className="flex items-center justify-center px-2 py-1 rounded-lg my-2 lg:my-0 bg-slate-300/30">
 											<LiaBedSolid />
 											<span className="ml-2">{bedrooms}</span>
+											<span className="lg:hidden block ml-1 text-secondary max-[340px]:truncate">{bedrooms > 1 ? 'Habitaciones' : 'Habitación'}</span>
 										</div>
 										<div className="flex items-center justify-center px-2 py-1 rounded-lg my-2 lg:my-0 bg-slate-300/30">
 											<LiaBathSolid />
 											<span className="ml-2">{bathroom}</span>
+											<span className="lg:hidden block ml-1 text-secondary">{bathroom > 1 ? 'Baños' : 'Baño'}</span>
 										</div>
 										<div className="flex items-center justify-center px-2 py-1 rounded-lg my-2 lg:my-0 bg-slate-300/30">
 											<LiaRulerCombinedSolid />
 											<span className="ml-2">{meters}</span>
+											<span className="lg:hidden block ml-1 text-secondary">Metros</span>
 										</div>
 									</div>
 								</footer>
