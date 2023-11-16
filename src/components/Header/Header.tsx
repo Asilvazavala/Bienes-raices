@@ -18,16 +18,6 @@ export function Header() {
           <BsBuildings className="text-2xl" />
         </Link>
 
-        <nav
-          className="block text-2xl md:hidden" 
-          onClick={() => setOpenMobileMenu(!openMobileMenu)}
-        >
-          {openMobileMenu 
-            ? <IoClose className="text-gray text-3xl" />
-            : <CiMenuFries />
-          }
-        </nav>
-
         <Navbar openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
 
         <article className='flex items-center gap-2 md:gap-5'>
@@ -35,9 +25,20 @@ export function Header() {
             <BsTelephone />
             <span className='hidden md:block'>+52 123 456 7890</span>
           </Link>
-          <Link href="/" className='px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black'>
+          <Link href="/" className='mr-1 lg:mr-0 px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black'>
             Login
           </Link>
+
+          <nav
+          className="block text-2xl md:hidden w-fit" 
+          onClick={() => setOpenMobileMenu(!openMobileMenu)}
+        >
+          {openMobileMenu 
+            ? <IoClose className="text-gray w-7 h-7" />
+            : <CiMenuFries className="text-gray w-7 h-7" />
+          }
+        </nav>
+
         </article>
       </article>
     </section>

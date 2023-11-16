@@ -33,7 +33,7 @@ export function Location() {
         center={coordinatePoint}
         zoom={5}
         scrollWheelZoom={false}
-        className="h-[500px] lg:h-[600px]"
+        className="h-[400px] lg:h-[500px]"
       >
         <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png" />
         <MarkerHouse selectMarker={centerMarker} />
