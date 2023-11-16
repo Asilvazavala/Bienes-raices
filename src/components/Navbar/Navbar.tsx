@@ -74,9 +74,9 @@ export function Navbar(props: NavbarProps) {
               <button 
                 onClick={() => handleNavigate(link)}
                 key={id} 
-                className="block md:hover:text-secondary md:hover:border-b-secondary 
-                md:border-b-[1px] md:border-b-transparent mx-auto py-6 md:py-0 w-full md:w-fit
-                border-b-gray border-b-[1px]"
+                className={`block md:hover:text-secondary md:hover:border-b-secondary 
+                md:border-b-[1px] mx-auto py-6 md:py-0 w-full md:w-fit
+                border-b-gray border-b-[1px] md:border-b-transparent ${openMobileMenu ? '' : 'border-b-transparent'}`}
               >
                 {name}
               </button>
