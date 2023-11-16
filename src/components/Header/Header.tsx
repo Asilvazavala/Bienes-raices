@@ -25,7 +25,8 @@ export function Header() {
             <BsTelephone />
             <span className='hidden md:block'>+52 123 456 7890</span>
           </Link>
-          <Link href="/" className='mr-1 lg:mr-0 px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black'>
+          <Link href="/" className='mr-1 lg:mr-0 py-1 px-2 lg:px-3 lg:py-2 text-white rounded-lg bg-secondary
+           hover:bg-black'>
             Login
           </Link>
 
@@ -34,8 +35,8 @@ export function Header() {
           onClick={() => setOpenMobileMenu(!openMobileMenu)}
         >
           {openMobileMenu 
-            ? <IoClose className="text-gray w-7 h-7" />
-            : <CiMenuFries className="text-gray w-7 h-7" />
+            ? <IoClose className="text-gray w-6 h-6" />
+            : <CiMenuFries className="text-gray w-6 h-6" />
           }
         </nav>
 
