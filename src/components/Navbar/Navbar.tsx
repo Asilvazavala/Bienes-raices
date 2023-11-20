@@ -66,9 +66,9 @@ export function Navbar(props: NavbarProps) {
           // Menu Principal & Responsive
           <div className={`${
             openMobileMenu
-              ? 'block translate-y-0 transition-transform duration-300 absolute left-0 bg-secondary w-full h-screen text-white p-2 top-16 z-[9999] text-3xl'
-              : 'max-[500px]:translate-y-full z-0 transition-transform duration-300 lg:translate-y-0 max-[500px]:border-none max-[500px]:text-transparent max-[500px]:absolute left-0 top-16'
-            } gap-3 lg:gap-5 md:flex`}
+              ? 'block translate-y-0 absolute left-0 bg-secondary w-full h-screen text-white p-2 top-16 z-[9999] text-3xl'
+              : 'max-[500px]:translate-y-full max-[500px]:w-full max-[500px]:h-screen z-0 lg:translate-y-0 max-[500px]:border-none max-[500px]:text-transparent max-[500px]:absolute left-0 bottom-0'
+            } gap-3 lg:gap-5 md:flex duration-500`}
           >
             {dataHeader.map(({ id, name, link}) => (
               <button 
