@@ -1,7 +1,6 @@
 import { LiaYoutube, LiaInstagram, LiaLinkedinIn, LiaPinterestP } from 'react-icons/lia'
 import { dataFooter } from './Footer.data'
 import Link from 'next/link';
-import { BsBuildings } from "react-icons/bs";
 
 export function Footer() {
   return (

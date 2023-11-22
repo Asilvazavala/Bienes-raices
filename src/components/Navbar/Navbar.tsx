@@ -39,7 +39,8 @@ export function Navbar(props: NavbarProps) {
             initial='initial'
             animate='animate'
             exit='exit'
-            className="mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-white bg-gray-400/40 top-5 rounded-3xl backdrop-blur w-fit"
+            className="mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-3 text-gray/80 bg-black/10 
+            top-5 rounded-3xl backdrop-blur w-fit"
           >
 
             {/* Menu Scrolling */}
