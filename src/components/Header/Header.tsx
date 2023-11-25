@@ -1,15 +1,12 @@
 "use client";
 
-import { CiMenuFries } from 'react-icons/ci';
 import { BsTelephone } from 'react-icons/bs';
 import Link from 'next/link';
-import { useState } from 'react';
 import { Navbar } from '../Navbar';
 import { BsBuildings } from "react-icons/bs";
-import { IoClose } from "react-icons/io5";
+import NavbarMobile from '../Navbar/NavbarMobile';
 
 export function Header() {
-  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
     <section className="container mx-auto my-5 lg:px-8">
@@ -18,7 +15,9 @@ export function Header() {
           <BsBuildings className="text-2xl w-6 h-6" />
         </Link>
 
-        <Navbar openMobileMenu={openMobileMenu} setOpenMobileMenu={setOpenMobileMenu} />
+        <div className='hidden md:flex'>
+          <Navbar />
+        </div>
 
         <article className='flex items-center gap-2 md:gap-5'>
           <Link href="tel:1234567890" className='flex items-center gap-4 cursor-pointer'>
@@ -32,12 +31,8 @@ export function Header() {
 
           <nav
           className="block text-2xl md:hidden w-fit" 
-          onClick={() => setOpenMobileMenu(!openMobileMenu)}
         >
-          {openMobileMenu 
-            ? <IoClose className="text-gray w-6 h-6" />
-            : <CiMenuFries className="text-gray w-6 h-6" />
-          }
+          <NavbarMobile />
         </nav>
 
         </article>

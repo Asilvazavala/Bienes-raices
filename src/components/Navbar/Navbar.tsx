@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react"
 import { dataHeader } from "../Header/Header.data"
-import { NavbarProps } from "./Navbar.types"
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export function Navbar(props: NavbarProps) {
-  const { openMobileMenu, setOpenMobileMenu } = props;
+export function Navbar() {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const router = useRouter();
@@ -26,7 +24,6 @@ export function Navbar(props: NavbarProps) {
 
   const handleNavigate = (url: string) => {
     router.push(`/${url}`)
-    setOpenMobileMenu(false)
   }
 
   return (
@@ -65,19 +62,15 @@ export function Navbar(props: NavbarProps) {
         )
         : (
           // Menu Principal & Responsive
-          <div className={`${
-            openMobileMenu
-              ? 'block translate-y-0 absolute left-0 bg-secondary w-full h-screen text-white p-2 top-16 z-[9999] text-3xl'
-              : 'max-[500px]:translate-y-full max-[500px]:w-full max-[500px]:h-screen z-0 lg:translate-y-0 max-[500px]:border-none max-[500px]:text-transparent max-[500px]:absolute left-0 bottom-0'
-            } gap-3 lg:gap-5 md:flex duration-500`}
+          <div className='z-0 gap-5 flex duration-500 '
           >
             {dataHeader.map(({ id, name, link}) => (
               <button 
                 onClick={() => handleNavigate(link)}
                 key={id} 
-                className={`block md:hover:text-secondary md:hover:border-b-secondary 
+                className='block md:hover:text-secondary md:hover:border-b-secondary 
                 md:border-b-[1px] mx-auto py-6 md:py-0 w-full md:w-fit
-                border-b-gray border-b-[1px] md:border-b-transparent ${openMobileMenu ? '' : 'border-b-transparent'}`}
+                border-b-gray border-b-[1px] md:border-b-transparent  border-b-transparent'
               >
                 {name}
               </button>
