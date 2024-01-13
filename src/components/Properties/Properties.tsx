@@ -114,7 +114,8 @@ export function Properties() {
 				{counterHouses < properties.length && (
 					<button 
 						onClick={loadMoreHouses}
-						className="p-4 text-white transition-all duration-150 cursor-pointer bg-secondary rounded-xl hover:bg-black">
+						className="p-4 text-white transition-all duration-150 cursor-pointer bg-secondary rounded-xl
+						 lg:hover:bg-secondary/70">
 						Ver más viviendas
 					</button>
 				)}
