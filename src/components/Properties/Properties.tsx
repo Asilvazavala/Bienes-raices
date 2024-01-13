@@ -87,7 +87,7 @@ export function Properties() {
 								<footer className="px-3 py-5">
 									<p className="text-gray">{location}</p>
 									<p className="font-semibold">{formatPrice(price)}</p>
-									<div className="flex flex-col gap-4 mt-2 lg:flex-row">
+									<div className="flex flex-col gap-2 lg:gap-4 mt-2 lg:flex-row">
 										<div className="flex items-center justify-center px-2 py-1 rounded-lg bg-slate-300/30">
 											<LiaBedSolid />
 											<span className="ml-2">{bedrooms}</span>
