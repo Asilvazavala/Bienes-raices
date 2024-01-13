@@ -69,9 +69,11 @@ export function Form() {
                 id="name"
                 type="text" 
                 name="name"
+                placeholder="Juan Pérez"
                 value={formValues.name}
                 onChange={handleChange}
                 required
+                autoComplete="name"
                 className="w-full rounded-md border-0 py-1.5 px-3 text-black shadow-sm ring-1 
                 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-0 focus:ring-inset text-sm"
               />
@@ -84,6 +86,7 @@ export function Form() {
               <input 
                 id="phone"
                 name="phone"
+                placeholder="456123456"
                 value={formValues.phone}
                 onChange={handleChange}
                 type="number"  
@@ -102,6 +105,7 @@ export function Form() {
               <textarea 
                 id="description"
                 name="description"
+                placeholder="Quisiera que me mostrará esta propiedad..."
                 value={formValues.description}
                 onChange={handleChange}
                 rows={4}
