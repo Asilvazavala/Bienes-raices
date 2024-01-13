@@ -61,7 +61,7 @@ export function Form() {
           </aside>
         </article>
 
-        <form className="mt-5" action="https://formsubmit.co/c985d2a549f57e35c2cc0011b290fe39" method="POST">
+        <form className="mt-5" action="https://formsubmit.co/asilvazavala@gmail.com" method="POST">
           <aside>
             <label htmlFor="name" className="text-sm text-gray">Nombre</label>
             <div className="mt-2">
