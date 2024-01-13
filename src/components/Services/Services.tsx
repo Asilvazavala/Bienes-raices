@@ -12,8 +12,8 @@ export function Services() {
         <h2 className="my-4 text-3xl font-semibold">Promociona tu vivienda para alquilarla o venderla al mejor precio.</h2>
         <p className="mb-10 mt-7 ">Contactáme para ayudarte con tu propiedad y sacarle el mejor provecho.</p>
         <Link
-          href="tel:1234567890" 
-          className="px-4 py-3 text-white transition-all duration-200 rounded-lg bg-secondary hover:bg-black">
+          href="tel:4561148433" 
+          className="px-4 py-3 text-white transition duration-200 rounded-lg bg-secondary lg:hover:bg-secondary/70">
           Llamar
         </Link>
       </article>

@@ -20,9 +20,9 @@ export function Header() {
         </div>
 
         <article className='flex items-center gap-2 md:gap-5'>
-          <Link href="tel:1234567890" className='flex items-center gap-4 cursor-pointer'>
+          <Link href="tel:4561148433" className='flex items-center gap-4 cursor-pointer'>
             <BsTelephone className="text-gray w-5 h-5" />
-            <span className='hidden md:block'>+52 123 456 7890</span>
+            <span className='hidden md:block'>+52 456 114 8433</span>
           </Link>
           {/* <Link href="/" className='mr-1 lg:mr-0 py-1 px-2 lg:px-3 lg:py-2 text-white rounded-lg bg-secondary
            hover:bg-black'>

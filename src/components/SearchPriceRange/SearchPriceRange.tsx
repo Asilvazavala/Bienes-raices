@@ -31,7 +31,7 @@ export function SearchPriceRange() {
 
       {isOpen ? <GrFormUp />: <GrFormDown />}
       {isOpen && (
-        <div className='absolute top-[70px] bg-white z-50 p-4 rounded-lg shadow-light w-[230px] left-0'>
+        <div className='absolute top-[70px] bg-neutral-100 z-50 p-4 rounded-lg shadow-light w-[230px] left-0'>
           <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(100000,400000)}>$100,000 - $400,000</p>
           <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(400000,700000)}>$400,000 - $700,000</p>
           <p className='hover:bg-secondary/30 transition z-[9999]' onClick={() => handlePrice(700000,1000000)}>$700,000 - $1,000,000</p>

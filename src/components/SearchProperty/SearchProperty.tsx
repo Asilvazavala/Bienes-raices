@@ -44,7 +44,7 @@ export function SearchProperty() {
 
       {isOpen ? <GrFormUp />: <GrFormDown />}
       {isOpen && (
-        <div className='absolute top-[70px] bg-white z-50 p-4 rounded-lg shadow-light w-[230px] left-0'>
+        <div className='absolute top-[70px] bg-neutral-100 z-50 p-4 rounded-lg shadow-light w-[230px] left-0'>
           {orderedTypeProperties.map(({id, propertyType}) => (
             <p 
               key={id}

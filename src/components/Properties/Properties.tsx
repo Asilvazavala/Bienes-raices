@@ -88,17 +88,17 @@ export function Properties() {
 									<p className="text-gray">{location}</p>
 									<p className="font-semibold">{formatPrice(price)}</p>
 									<div className="flex flex-col gap-4 mt-2 lg:flex-row">
-										<div className="flex items-center justify-center px-2 py-1 rounded-lg my-2 lg:my-0 bg-slate-300/30">
+										<div className="flex items-center justify-center px-2 py-1 rounded-lg bg-slate-300/30">
 											<LiaBedSolid />
 											<span className="ml-2">{bedrooms}</span>
 											<span className="lg:hidden block ml-1 text-gray max-[340px]:truncate">{bedrooms > 1 ? 'Habitaciones' : 'Habitación'}</span>
 										</div>
-										<div className="flex items-center justify-center px-2 py-1 rounded-lg my-2 lg:my-0 bg-slate-300/30">
+										<div className="flex items-center justify-center px-2 py-1 rounded-lg bg-slate-300/30">
 											<LiaBathSolid />
 											<span className="ml-2">{bathroom}</span>
 											<span className="lg:hidden block ml-1 text-gray">{bathroom > 1 ? 'Baños' : 'Baño'}</span>
 										</div>
-										<div className="flex items-center justify-center px-2 py-1 rounded-lg my-2 lg:my-0 bg-slate-300/30">
+										<div className="flex items-center justify-center px-2 py-1 rounded-lg bg-slate-300/30">
 											<LiaRulerCombinedSolid />
 											<span className="ml-2">{meters}</span>
 											<span className="lg:hidden block ml-1 text-gray">Metros</span>

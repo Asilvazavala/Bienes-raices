@@ -39,7 +39,7 @@ export function SearchLocation() {
 
       {isOpen ? <GrFormUp />: <GrFormDown />}
       {isOpen && (
-        <div className='absolute top-[70px] bg-white p-4 rounded-lg shadow-light w-[200px] left-0 z-50'>
+        <div className='absolute top-[70px] bg-neutral-100 p-4 rounded-lg shadow-light w-[200px] left-0 z-50'>
           {orderedStates.map(({id, state}) => (
             <div 
               key={id}

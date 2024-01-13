@@ -24,10 +24,10 @@ export function Footer() {
           <p>Calle Juárez, 25</p>
           <p>Guanajuato, México</p>
           <div className='flex gap-4 mt-5 md:justify-end'>
-            <LiaInstagram className="text-3xl cursor-pointer transition hover:text-purple-500" href="#" />
-            <LiaLinkedinIn className="text-3xl cursor-pointer transition hover:text-blue-500" href="#" />
-            <LiaPinterestP className="text-3xl cursor-pointer transition hover:text-red-300" href="#" />
-            <LiaYoutube className="text-3xl cursor-pointer transition hover:text-red-500" href="#" />
+            <Link href="https://instagram.com" target='_blank' rel='noopener'><LiaInstagram className="text-3xl cursor-pointer transition hover:text-purple-500" /></Link>
+            <Link href="https://www.linkedin.com/in/antonio-silva-developer/" target='_blank' rel='noopener'><LiaLinkedinIn className="text-3xl cursor-pointer transition hover:text-blue-500" /></Link>
+            <Link href="https://www.pinterest.com.mx/" target='_blank' rel='noopener'><LiaPinterestP className="text-3xl cursor-pointer transition hover:text-red-300" /></Link>
+            <Link href="https://youtube.com" target='_blank' rel='noopener'><LiaYoutube className="text-3xl cursor-pointer transition hover:text-red-500" /></Link>
           </div>
         </aside>
       </article>

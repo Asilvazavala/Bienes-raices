@@ -47,9 +47,9 @@ export default function NavbarMobile() {
     <nav className="md:hidden ml-8">
     <label htmlFor="menuMobile">
       <input type='checkbox' id='menuMobile' className='hidden peer' />
-      <CiMenuFries className='h-8 w-8 peer-checked:scale-0 absolute top-5 right-5 z-0
+      <CiMenuFries className='h-6 w-6 peer-checked:scale-0 absolute top-5 right-5 z-0
       transition duration-700 delay-100 peer-checked:delay-0' />
-      <IoClose className='h-8 w-8 scale-0 text-black peer-checked:block z-[70] 
+      <IoClose className='h-7 w-7 scale-0 text-black peer-checked:block z-[70] 
       peer-checked:scale-100 absolute top-5 right-5 transition duration-700 delay-0 peer-checked:delay-100' />
       
       <ul className='z-[60] translate-x-[-150%] w-full absolute right-0 top-0 transition duration-700 

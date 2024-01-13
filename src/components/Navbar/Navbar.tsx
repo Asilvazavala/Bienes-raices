@@ -46,7 +46,7 @@ export function Navbar() {
                 <Link 
                   key={id}
                   href={link}
-                  className="hover:text-secondary hover:border-b-[1px] hover:border-secondary"
+                  className="hover:text-secondary text-black hover:border-b-[1px] hover:border-secondary"
                 >
                   {name}
                 </Link>
