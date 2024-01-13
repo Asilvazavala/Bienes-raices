@@ -10,7 +10,7 @@ export function Navbar() {
   const router = useRouter();
 
   const handleScroll = () => {
-    window.scrollY >= window.innerHeight - 600
+    window.scrollY >= window.innerHeight 
       ? setIsScrolling(true)
       : setIsScrolling(false)
   }
@@ -51,12 +51,12 @@ export function Navbar() {
                   {name}
                 </Link>
               ))}
-              <Link
+             {/* <Link
                 href="/"
                 className="px-3 py-2 text-white rounded-lg bg-secondary hover:bg-black"
               >
                 Login
-              </Link>
+              </Link>*/}
             </div>
           </motion.nav>
         )

@@ -24,10 +24,10 @@ export function Header() {
             <BsTelephone className="text-gray w-5 h-5" />
             <span className='hidden md:block'>+52 123 456 7890</span>
           </Link>
-          <Link href="/" className='mr-1 lg:mr-0 py-1 px-2 lg:px-3 lg:py-2 text-white rounded-lg bg-secondary
+          {/* <Link href="/" className='mr-1 lg:mr-0 py-1 px-2 lg:px-3 lg:py-2 text-white rounded-lg bg-secondary
            hover:bg-black'>
             Login
-          </Link>
+          </Link> */}
 
           <nav
           className="block text-2xl md:hidden w-fit" 
