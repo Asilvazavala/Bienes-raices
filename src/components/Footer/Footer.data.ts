@@ -1,36 +1,36 @@
 export const dataFooter = [
-  {
-    id: 1,
-    links: [
-      {
-        id: 1,
-        name: "Artículos",
-        link: "#articles",
-      },
-      {
-        id: 2,
-        name: "Viviendas",
-        link: "#houses",
-      },
-      {
-        id: 3,
-        name: "Alquiler",
-        link: "#rent",
-      },
-      {
-        id: 4,
-        name: "Venta",
-        link: "#sell",
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   links: [
+  //     {
+  //       id: 1,
+  //       name: "Artículos",
+  //       link: "#articles",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Viviendas",
+  //       link: "#houses",
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Alquiler",
+  //       link: "#rent",
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Venta",
+  //       link: "#sell",
+  //     },
+  //   ],
+  // },
   {
     id: 2,
     links: [
       {
         id: 1,
         name: "Sobre nosotros",
-        link: "#about-us",
+        link: "#about",
       },
       {
         id: 2,
